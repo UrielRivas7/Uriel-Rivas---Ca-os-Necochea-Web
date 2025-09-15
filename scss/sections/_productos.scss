@@ -1,0 +1,49 @@
+/*productos*/ 
+
+.products-inicio div nav ul {
+    div{
+        nav{
+            ul{    
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: grid;
+                grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Responsive grid */
+                gap: 20px; /* Space between grid items */
+                max-width: 1320px;
+                text-align: center;
+                li{
+                    height: auto; /* Maintain aspect ratio */
+                    padding: 20px; /* Add padding around the list item */
+                    border: 1px solid #ddd; /* Add a border */
+                    border-radius: 8px; /* Rounded corners */
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+                    text-decoration: none;
+                    a{
+                        text-decoration: none; /* Remove underline from links */
+                    }
+                    img{
+                        height: auto; /* Maintain aspect ratio */
+                        border-radius: 8%;
+                        margin-top: 20px; /* Add margin to the top */
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.crumbs{
+    color:#6b7280;
+    font-size: 17px;     
+    font-weight: lighter;
+}
+
+
+.products {
+    max-width: 1320px; 
+    margin: 0 auto; 
+    padding: 10px 20px 0px; 
+    color: #232323;
+}

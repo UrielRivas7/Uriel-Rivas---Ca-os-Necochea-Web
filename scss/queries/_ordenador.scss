@@ -1,0 +1,16 @@
+/* en móvil, al desplegar, mantené el fondo gris */
+@media (max-width:1320px){
+    .navbar-collapse{ 
+        background:#e5e8eb; 
+        padding:.5rem 0; 
+    }
+    .navbar .nav-link{ 
+        padding:.6rem 1rem; 
+    }
+}
+
+@media (min-width:1320px){
+    .navbar-nav {
+        gap: 50px; /* más espacio entre ítems */
+    }
+}

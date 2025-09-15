@@ -1,0 +1,76 @@
+
+/*Contactos*/
+.contact {
+    max-width: 1320px; 
+    margin: 0 auto; 
+    padding: 10px 20px 0px; 
+    color: #232323;
+    .contact-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: stretch;
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            width: 520px;
+            input textarea{
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+            }
+            button {
+                background: #d23a3a;
+                color: #fff;
+                border: none;
+                padding: 12px;
+                border-radius: 6px;
+                font-weight: bold;
+                cursor: pointer;
+                
+            }   
+        }
+            .contact-social {
+            max-width: 100%;/* mismo ancho que los inputs */
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;/* espacio entre cada red */
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    text-decoration: none;
+                    color: #232323;
+                    font-size: 20px;/* tamaño del texto */
+                    font-weight: 500;
+                }
+                i {
+                    font-size: 28px;/* ajustá el tamaño del logo */
+                    color: #d23a3a;/* color de marca */
+                    min-width: 28px;/* asegura alineación */
+                    text-align: center;
+                }
+            }
+    }
+}
+
+/*Configuracion de la imagen de la section contactos, hace que la imagen ocupe todo el ancho del contenedor*/       
+
+.contact-form button:hover {
+    opacity: .85;
+}
+/*Configuracion de la opacidad al pasar el mouse por encima del boton de envio del formulario de la section contactos*/
+
+.contact-social a:hover {
+    color: #d23a3a;
+}
+/* configuracion de los enlaces sociales al pasar el mouse por encima, hace que el color del texto cambie a rojo de marca */
+
+.crumbs{
+    color:#6b7280;
+    font-size: 17px;     
+    font-weight: lighter;
+}

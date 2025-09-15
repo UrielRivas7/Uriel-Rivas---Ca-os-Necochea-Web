@@ -1,0 +1,68 @@
+/*sobre-nosotros*/
+.about-us {
+    max-width: 1320px; 
+    margin: 0 auto; 
+    padding: 10px 20px 0px; 
+    color: #232323;
+    .about-row {
+        max-width:1320px; 
+        margin:0 auto;
+        display:grid;
+        grid-template-columns: 520px 1fr;/* fijamos ancho de la imagen */
+        gap: 32px;
+        align-items:start;/* alineados arriba a la misma altura */
+        margin-bottom:20px;/* menos espacio debajo */
+        img {
+            width:100%;
+            border-radius:12px;
+            object-fit:cover;
+            margin-top: 20px;
+        }
+        p {
+            line-height:1.7;
+            margin:0;
+        }
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            .texto p{
+                border-left:4px solid #d23a3a;
+                border-radius:10px;
+                padding:12px 14px;
+            }
+        }
+    }
+    .about-us .about-cta {
+        display:flex;
+        justify-content:center;
+        a {
+            font-weight:700;
+            text-decoration: underline;
+            color:#d23a3a;
+        }
+        img {
+            width:100%;
+            object-fit:cover;
+        }
+    }
+}
+
+
+.texto .active{ 
+    color:#d23a3a; 
+    font-weight:800; 
+    margin-right:4px; 
+}
+/*Configuracion del titulo activo "MISION y VISION" de la section sobre nosotros*/
+
+.about-us .about-cta a:hover {
+    opacity:.85;
+}
+/*Configuracion de la opacidad al seleccionar el enlace del boton de la section sobre nosotros*/
+
+.crumbs{
+    color:#6b7280;
+    font-size: 17px;     
+    font-weight: lighter;
+}

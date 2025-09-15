@@ -7,19 +7,98 @@
     box-sizing: border-box;
 }
 
+/*fondo blanco y ligera sombra como en el ejemplo*/
+.topbar{
+    background:#fff;
+    padding-bottom: 18px;
+    padding-top: 12px;
+
+}
+
+/*Quitar el azul de los links y subrayado*/
+.topbar a{
+    color:#232323;
+    text-decoration:none;
+}
+.topbar a:hover{ 
+    color:#232323; 
+}
+
+/*para asegurar centrado vertical del logo en su celda*/
+.topbar .d-flex.align-items-center{
+    min-height: 64px; /*mismo alto visual del logo*/
+}
+
+/*Logo*/
+.topbar .logo-header{   
+    height:100px; 
+    width:auto; 
+    display:block; 
+}
+@media (min-width:1320px){
+    .logo-header{height:56px;} 
+}
+
+/*Marca a la izquierda*/
+.brand-link{ 
+    align-items:center; 
+}
+.brand-text{ 
+    line-height:1.05; 
+    font-weight:bold; 
+    margin-left: 5px;
+}
+
+/*input más alto, con borde rojo grueso y esquinas redondeadas*/
+.search-input{
+    border:2px solid #d23a3a;
+    font-size:1rem;
+    border-radius:12px;
+    padding-left: 20px;
+}
+.search-input::placeholder{ 
+    color:#d23a3a; 
+}
+.search-input:focus{
+    border-color:#d23a3a;
+    box-shadow:0 0 0 .2rem rgba(210,58,58,.12);
+}
+
+/*botón del buscador*/
+.btn-search{
+    background:#d23a3a;
+    color:#fff;
+    border:2px solid #d23a3a;
+    border-top-right-radius:12px;
+    border-bottom-right-radius:12px;
+    padding:0.9rem 1rem;/*mismo alto que el input*/
+}
+.btn-search:hover{  
+    background:#b32f2f;
+    border-color:#b32f2f; 
+}
+
+/*==== Carrito a la derecha, rojo con ícono ====*/
+.cart-link{     
+    color:#d23a3a; font-weight:700; 
+}
+.cart-link:hover{ 
+    color:#b32f2f; 
+}
+.cart-icon{ 
+    font-size:1.25rem; 
+}
+
+/*Responsive: en mobile no mostramos el texto largo de marca ni “Mi carrito”*/
+@media (max-width:991.98px){
+    .brand-text{display:none;}
+    .cart-text{display:none;}
+}
+
 /*Tipografia del sitio*/
 body {
     font-family: "Signika Negative", sans-serif
 }
-
-/* Estilo para ambos botones */
-.boton-dark, .boton-light {
-    display: inline-block; /* Make the button an inline block */
-    text-decoration: none; /* Remove underline from links */
-    border-radius: 5px; /* Rounded corners for buttons */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-}
-
 
 /*Configuracion boton rojo*/
 .boton-dark{
@@ -28,15 +107,14 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     padding: 10px 20px; /* Add padding for better button appearance */
-    }
-
-/*Configuracion boton blanco*/
-.boton-light {
-    background-color: #fff; 
-    color: #d63637;
-    padding: 10px 20px; /* Add padding for better button appearance */
-    text-transform: uppercase;
-    font-weight: 500;
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    display: flex;
+    gap: 20px; /* Space between title and subtitle */
+    margin-top: 20px; /* Add margin to the top */
+    flex-direction: column; /* Stack title and subtitle vertically */
+    text-align: center; /* Center text */
 }
 
 .active{
@@ -171,31 +249,6 @@ section > *:first-child {
     margin-top: 0;   /* elimina margen extra arriba del primer hijo */
 }
 
-/*hero*/
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    text-align: center; /* Center text */
-    padding-top: 20px; /* Add padding to the top */
-    padding-bottom: 20px; /* Add padding to the bottom */
-    min-height: 100vh; /* Full viewport height */
-}
-
-.text-hero {
-    display: flex;
-    gap: 20px; /* Space between title and subtitle */
-    margin-top: 20px; /* Add margin to the top */
-    flex-direction: column; /* Stack title and subtitle vertically */
-    text-align: center; /* Center text */
-/*Configuracion del texto del encuadrado de la section hero*/
-}
-
-.hero > div{
-    width: 100%; /* Full width */
-}
-
 /*sobre-nosotros*/
 .about-us {
     max-width: 1320px; 
@@ -218,9 +271,7 @@ section > *:first-child {
 
 .about-row img {
     width:100%;
-    border-radius:12px;
     object-fit:cover;
-    margin-top: 20px;
 }
 /*Configuracion de la imagen de la section sobre nosotros*/
 
@@ -269,14 +320,7 @@ section > *:first-child {
 }
 /*Configuracion de la opacidad al seleccionar el enlace del boton de la section sobre nosotros*/
 
-.about-us .about-row img {
-    order:-1;
-    width:100%;
-    height: 430px;
-    object-fit:cover;
-    border-radius:12px;
-    display:flex;
-}
+
 /*Configuracion de la imagen de la section sobre nosotros*/
 
 .crumbs{
@@ -352,16 +396,6 @@ section > *:first-child {
     align-items: stretch;
 }
 /*Configuracion del contenedor de la section contactos, hace que el contacto este en dos columnas*/
-
-.contact-img img {
-    width: 100%;
-    border-radius: 10px;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    object-position: center;
-}
-/*Configuracion de la imagen de la section contactos, hace que la imagen ocupe todo el ancho del contenedor*/       
 
 .contact form {
     display: flex;
@@ -490,15 +524,6 @@ section > *:first-child {
     opacity:.9
 }
 
-.services-image img{
-    max-width:100%; 
-    height:auto;
-    margin-top: 10px;
-    object-fit: cover;
-    display:block; 
-    border-radius:10px
-}
-
 .crumbs{
     color:#7a7979;
     font-size: 17px;     
@@ -518,7 +543,7 @@ section > *:first-child {
         align-items: start;
     }
 
-/* Imágenes de secciones */
+/*Imágenes de secciones*/
     .about-media img,
     .servicies-media img,
     .contact-img img{
@@ -528,13 +553,13 @@ section > *:first-child {
         border-radius: 12px;
     }
 
-/* Grilla de productos: 2 por fila */
+/*Grilla de productos: 2 por fila*/
     .products-inicio div nav ul{ 
         grid-template-columns: repeat(2, minmax(150px, 1fr)); 
         gap: 20px;
     }
 
-/* Contenedores: menos padding lateral */
+/*Contenedores: menos padding lateral*/
     .contenedor,
     .contact,
     .about-us,
@@ -545,7 +570,7 @@ section > *:first-child {
         padding-right: 20px;
     }
 
-/* Títulos: un poco más chicos */
+/*Títulos: un poco más chicos*/
     h1{     
         font-size: clamp(26px, 6vw, 36px); 
     }
@@ -553,13 +578,13 @@ section > *:first-child {
         font-size: clamp(20px, 5vw, 28px); 
     }
 
-/* Formularios y sociales: full width y con aire */
+/*Formularios y sociales: full width y con aire */
     .contact-form,
     .contact-social{
         gap: 12px;
     }
 
-/* Espaciado vertical uniforme */
+/*Espaciado vertical uniforme*/
     section{ 
         margin: 32px 20px; 
     }
@@ -571,41 +596,39 @@ section > *:first-child {
     }
 }
 
-/*navbar*/
+/*Navbar*/
     .navbar-nav {
-    gap: 0px; /* más espacio entre ítems */
+    gap: 0px; /*más espacio entre ítems*/
     }
 
-/* franja gris + sombra */
+/*Franja gris + sombra*/
 .nav-main{
     background:#e5e8eb;
     box-shadow:0 4px 10px rgba(0,0,0,.12);
     margin-bottom: 20px;
 }
 
-/* estilo de links */
+/*Estilo de links*/
 .navbar .nav-link{
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: .5px;
-    color: #232323;/* negro por defecto */
-    text-decoration: none;/* sin subrayado */;
+    color: #232323;/*negro por defecto*/
+    text-decoration: none;/*sin subrayado*/;
 }
 
 .nav-link:hover{ 
     color: #d23a3a;
-    text-decoration: underline;
+    text-decoration: none;
     text-decoration-color: #d23a3a;
     
 }
 
 .navbar-nav .nav-item .nav-link.active {
     color: #d23a3a;/* texto rojo */
-    text-decoration: underline;/* subrayado */
-    text-decoration-color: #d23a3a;/* subrayado rojo */
 }
 
-/* en móvil, al desplegar, mantené el fondo gris */
+/*En móvil, al desplegar, mantené el fondo gris */
 @media (max-width:1320px){
     .navbar-collapse{ 
         background:#e5e8eb; 
@@ -618,9 +641,163 @@ section > *:first-child {
 
 @media (min-width:1320px){
     .navbar-nav {
-        gap: 50px; /* más espacio entre ítems */
+        gap: 50px; /*más espacio entre ítems*/
+    }
+}
+
+/*Animaciones para "Sobre Nosotros" y "Contactos" 
+
+/*Contenedor sin altura fija: toma la de la imagen*/
+.animation-auto{
+    position: relative;
+    display: inline-block;/* o block si querés a todo el ancho */
+    overflow: hidden;
+}
+
+/*Imagen a su tamaño natural (NO se recorta)*/
+.animation-auto img{
+    display: block;
+    max-width: 100%;
+    height: auto; /*clave para que no recorte*/
+    opacity: 0;
+    transform: scale(1.02);/*leve zoom*/
+    animation: imgIn .8s ease-out .35s forwards;
+}
+
+/*Overlay rojo que barre*/
+.animation-auto::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:#b5232a;/* rojo corporativo */
+    transform: translateX(0);
+    animation: sweep .8s ease-in-out forwards;
+}
+
+/*cuando se activa (al cargar o al hacer scroll)*/
+.animation-auto.is-in img{ 
+    animation: imgIn .8s ease-out .35s forwards; 
+}
+.animation-auto.is-in::after{ 
+    animation: sweep .8s ease-in-out forwards; 
+}
+
+/*Animaciones*/
+@keyframes sweep{ 
+    from{transform:translateX(0)} to{transform:translateX(-100%)} 
+}
+@keyframes imgIn{ 
+    to{opacity:1; transform:translateX(0)} 
+}
+
+/*Animacion para "Servicios"*/
+
+/*Configuración previa a la animación*/
+.animation-item{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;/*o block si la quieres a todo el ancho*/
+    width: 100%;
+    aspect-ratio: 16/9;/*o una altura fija*/
+}
+
+/*La imagen arranca escondida (opacidad 0)*/
+.animation-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.02);/*leve zoom*/
+    animation: imgIn .8s ease-out .35s forwards;
+}
+
+/*Capa roja que “barre” la imagen*/
+.animation-item::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:#b5232a;/* rojo corporativo */
+    transform: translateX(0);
+    animation: sweep .8s ease-in-out forwards;
+}
+
+/*Animaciones*/
+@keyframes sweep{
+    from{
+        transform: translateX(0%); 
+    }
+    to{ 
+        transform: translateX(-100%); 
+    } 
+/* se va hacia la izquierda */
+}
+
+@keyframes imgIn{
+    to{
+        opacity: 1; 
+        transform: scale(1); 
+    } 
+/* aparece y vuelve a tamaño normal */
+}
+
+/*Animación para el navbar*/
+
+/*Espacio entre items (solo desktop, opcional)*/
+@media (min-width: 992px){
+    .navbar-nav {gap: 28px;}
+}
+
+/*Link base*/
+.navbar-nav .nav-link{
+    position: relative;
+    color: #232323;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;/*sin subrayado*/
+    letter-spacing: .5px;
+    transition: color .25s ease;
+}
+
+/*Subrayado animado (inicialmente oculto)*/
+.navbar-nav .nav-link::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 8px; /*separacion del texto*/
+    height: 2px;
+    background: #d23a3a; /*rojo corporativo*/
+    transform: scaleX(0);
+    transform-origin: left center; /*sale desde la izquierda*/
+    transition: transform .35s ease;
+}
+
+/*Hover/foco por teclado*/
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus{
+    color: #d23a3a;
+}
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after{
+    transform: scaleX(1);
+}
+
+/*Estado activo/página actual*/
+.navbar-nav .nav-link.active{
+    color: #d23a3a;
+}
+.navbar-nav .nav-link.active::after{
+    transform: scaleX(1);
+}
+
+/*Accesibilidad: respeta "reducir movimiento"*/
+@media (prefers-reduced-motion: reduce){
+    .navbar-nav .nav-link,
+    .navbar-nav .nav-link::after{
+    transition: none;
     }
 }
 
 /*main*/
 /*footer*/
+

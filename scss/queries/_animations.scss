@@ -1,0 +1,153 @@
+
+/*Animaciones para "Sobre Nosotros" y "Contactos" 
+
+/*Contenedor sin altura fija: toma la de la imagen*/
+.animation-auto{
+    position: relative;
+    display: inline-block;/* o block si querés a todo el ancho */
+    overflow: hidden;
+}
+
+/*Imagen a su tamaño natural (NO se recorta)*/
+.animation-auto img{
+    display: block;
+    max-width: 100%;
+    height: auto; /*clave para que no recorte*/
+    opacity: 0;
+    transform: scale(1.02);/*leve zoom*/
+    animation: imgIn .8s ease-out .35s forwards;
+}
+
+/*Overlay rojo que barre*/
+.animation-auto::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:#b5232a;/* rojo corporativo */
+    transform: translateX(0);
+    animation: sweep .8s ease-in-out forwards;
+}
+
+/*Cuando se activa (al cargar o al hacer scroll)*/
+.animation-auto.is-in img{ 
+    animation: imgIn .8s ease-out .35s forwards; 
+}
+.animation-auto.is-in::after{ 
+    animation: sweep .8s ease-in-out forwards; 
+}
+
+/*Animaciones*/
+@keyframes sweep{ 
+    from{transform:translateX(0)} to{transform:translateX(-100%)} 
+}
+@keyframes imgIn{ 
+    to{opacity:1; transform:translateX(0)} 
+}
+
+/*Animacion para "Servicios"*/
+
+/*Configuración previa a la animación*/
+.animation-item{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;/*o block si la quieres a todo el ancho*/
+    width: 100%;
+    aspect-ratio: 16/9;/*o una altura fija*/
+}
+
+/*La imagen arranca escondida (opacidad 0)*/
+.animation-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.02);/*leve zoom*/
+    animation: imgIn .8s ease-out .35s forwards;
+}
+
+/*Capa roja que “barre” la imagen*/
+.animation-item::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:#b5232a;/* rojo corporativo */
+    transform: translateX(0);
+    animation: sweep .8s ease-in-out forwards;
+}
+
+/*Animaciones*/
+@keyframes sweep{
+    from{
+        transform: translateX(0%); 
+    }
+    to{ 
+        transform: translateX(-100%); 
+    } 
+/* se va hacia la izquierda */
+}
+
+@keyframes imgIn{
+    to{
+        opacity: 1; 
+        transform: scale(1); 
+    } 
+/* aparece y vuelve a tamaño normal */
+}
+
+/*Animación para el navbar*/
+
+/*Espacio entre items (solo desktop, opcional)*/
+@media (min-width: 992px){
+    .navbar-nav {gap: 28px;}
+}
+
+/*Link base*/
+.navbar-nav .nav-link{
+    position: relative;
+    color: #232323;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;/*sin subrayado*/
+    letter-spacing: .5px;
+    transition: color .25s ease;
+}
+
+/*Subrayado animado (inicialmente oculto)*/
+.navbar-nav .nav-link::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 8px; /*separacion del texto*/
+    height: 2px;
+    background: #d23a3a; /*rojo corporativo*/
+    transform: scaleX(0);
+    transform-origin: left center; /*sale desde la izquierda*/
+    transition: transform .35s ease;
+}
+
+/*Hover/foco por teclado*/
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus{
+    color: #d23a3a;
+}
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after{
+    transform: scaleX(1);
+}
+
+/*Estado activo/página actual*/
+.navbar-nav .nav-link.active{
+    color: #d23a3a;
+}
+.navbar-nav .nav-link.active::after{
+    transform: scaleX(1);
+}
+
+/*Accesibilidad: respeta "reducir movimiento"*/
+@media (prefers-reduced-motion: reduce){
+    .navbar-nav .nav-link,
+    .navbar-nav .nav-link::after{
+    transition: none;
+    }
+}

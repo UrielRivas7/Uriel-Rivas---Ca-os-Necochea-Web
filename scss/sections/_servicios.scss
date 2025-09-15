@@ -1,0 +1,52 @@
+/*Servicios*/
+.services {
+    max-width: 1320px; 
+    margin: 0 auto; 
+    padding: 10px 20px 0px; 
+    color: #232323;
+    .services-row{
+        display:grid; 
+        grid-template-columns: 1.1fr .9fr; 
+        gap:32px; 
+        align-items:flex-start;
+        .services-text {
+            flex: 1;
+            .subtitle-services{
+                margin:0 0 10px;
+                font-size: 20px;
+                color:#c93333;
+                font-weight: 600; 
+                text-transform:uppercase
+            }
+            .services-list{
+                list-style-type: disc;
+                padding-left: 20px;
+                line-height:1.7
+                li{
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}
+
+
+.boton-consult{
+    display: inline-block;
+    background:#c93333; 
+    color:#fff; 
+    border-radius:8px;
+    padding:12px 22px; 
+    font-weight:700; 
+    text-decoration:none
+}
+
+.boton-consult:hover{
+    opacity:.9
+}
+
+.crumbs{
+    color:#7a7979;
+    font-size: 17px;     
+    font-weight: normal;
+}

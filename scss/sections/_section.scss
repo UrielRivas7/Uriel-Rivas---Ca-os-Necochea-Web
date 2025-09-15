@@ -1,0 +1,14 @@
+/*section*/
+.section nav ul li a {
+    color: #000; /* Default link color */
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+section > *:first-child {
+    margin-top: 0;   /* elimina margen extra arriba del primer hijo */
+}

@@ -1,0 +1,33 @@
+/*navbar*/
+    .navbar-nav {
+    gap: 0px; /* más espacio entre ítems */
+    }
+
+/* franja gris + sombra */
+.nav-main{
+    background:#e5e8eb;
+    box-shadow:0 4px 10px rgba(0,0,0,.12);
+    margin-bottom: 20px;
+}
+
+/* estilo de links */
+.navbar .nav-link{
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: #232323;/* negro por defecto */
+    text-decoration: none;/* sin subrayado */;
+}
+
+.nav-link:hover{ 
+    color: #d23a3a;
+    text-decoration: underline;
+    text-decoration-color: #d23a3a;
+    
+}
+
+.navbar-nav .nav-item .nav-link.active {
+    color: #d23a3a;/* texto rojo */
+    text-decoration: underline;/* subrayado */
+    text-decoration-color: #d23a3a;/* subrayado rojo */
+}

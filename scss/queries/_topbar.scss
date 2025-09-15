@@ -1,0 +1,87 @@
+/*fondo blanco y ligera sombra como en el ejemplo*/
+.topbar{
+    background:#fff;
+    padding-bottom: 18px;
+    padding-top: 12px;
+
+}
+
+/*Quitar el azul de los links y subrayado*/
+.topbar a{
+    color:#232323;
+    text-decoration:none;
+}
+.topbar a:hover{ 
+    color:#232323; 
+}
+
+/*para asegurar centrado vertical del logo en su celda*/
+.topbar .d-flex.align-items-center{
+    min-height: 64px; /*mismo alto visual del logo*/
+}
+
+/*Logo*/
+.topbar .logo-header{   
+    height:100px; 
+    width:auto; 
+    display:block; 
+}
+@media (min-width:1320px){
+    .logo-header{height:56px;} 
+}
+
+/*Marca a la izquierda*/
+.brand-link{ 
+    align-items:center; 
+}
+.brand-text{ 
+    line-height:1.05; 
+    font-weight:bold; 
+    margin-left: 5px;
+}
+
+/*input más alto, con borde rojo grueso y esquinas redondeadas*/
+.search-input{
+    border:2px solid #d23a3a;
+    font-size:1rem;
+    border-radius:12px;
+    padding-left: 20px;
+}
+.search-input::placeholder{ 
+    color:#d23a3a; 
+}
+.search-input:focus{
+    border-color:#d23a3a;
+    box-shadow:0 0 0 .2rem rgba(210,58,58,.12);
+}
+
+/*botón del buscador*/
+.btn-search{
+    background:#d23a3a;
+    color:#fff;
+    border:2px solid #d23a3a;
+    border-top-right-radius:12px;
+    border-bottom-right-radius:12px;
+    padding:0.9rem 1rem;/*mismo alto que el input*/
+}
+.btn-search:hover{  
+    background:#b32f2f;
+    border-color:#b32f2f; 
+}
+
+/*==== Carrito a la derecha, rojo con ícono ====*/
+.cart-link{     
+    color:#d23a3a; font-weight:700; 
+}
+.cart-link:hover{ 
+    color:#b32f2f; 
+}
+.cart-icon{ 
+    font-size:1.25rem; 
+}
+
+/*Responsive: en mobile no mostramos el texto largo de marca ni “Mi carrito”*/
+@media (max-width:991.98px){
+    .brand-text{display:none;}
+    .cart-text{display:none;}
+}

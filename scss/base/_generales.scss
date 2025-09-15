@@ -1,0 +1,147 @@
+/*generales*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Tipografia del sitio*/
+body {
+    font-family: "Signika Negative", sans-serif
+}
+
+/*Configuracion boton rojo*/
+.boton-dark{
+    background-color: #d63637;
+    color: #fff; 
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 20px; /* Add padding for better button appearance */
+    display: flex;
+    gap: 20px; /* Space between title and subtitle */
+    margin-top: 20px; /* Add margin to the top */
+    flex-direction: column; /* Stack title and subtitle vertically */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}   
+
+.active{
+    font-weight: 800;
+    color: #d23a3a;
+}
+
+/*Configuracion de los titulos*/
+.title {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 35px;
+    color: #d63637; /* Title color */
+    margin-bottom: 6px;
+    margin-top: 10px; /* Add margin to the top */
+    margin-bottom: 10px; /* Add margin to the bottom */
+}
+
+.title-inicio {
+    text-transform: uppercase;
+    font-size: 35px;
+    color: #d63637; /* Title color */
+    font-weight: 800;
+    margin-bottom: 10px; /* Add margin to the bottom */
+}
+
+/*Configuracion de los subtitulos*/
+.subtitle {
+    font-size: 25px;
+    font-weight: bold;
+    color: #757575;
+    margin-bottom: 20px;
+}
+
+.subtitle-inicio {
+    font-size: 25px;
+    font-weight: bold;
+    color: #757575;
+    margin-bottom: 30px;
+}
+
+section div p {
+    font-size: 16px; /* Font size for product description */
+    margin-bottom: 20px; /* Add margin to the bottom */
+}
+/*Configuracion de los subtitulos/*
+
+
+/*Alineacion de los contenedores del sitio*/
+.contenedor {
+    max-width: 1320px; /* Limit the width of the container */
+    padding: 0 20px; /* Add padding around the container */
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 20px 0px; 
+}
+
+/*Configuracion de las imagenes*/
+img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+/*Configuracion de los enlaces*/
+a{
+    text-decoration: none; /* Remove underline from links */
+    color: #000000;
+}
+
+/*Configuracion de los enlaces activos*/
+a.active {
+    color: #d63637; /* Active link color */
+    font-weight: bold; /* Make active link bold */
+    text-decoration: underline; /* Underline active link */
+}
+
+/*Configuracion de los titulos h1, h2, h3*/
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 30px;
+    color: #d63637;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 20px;
+    color: #d63637;
+    text-transform: uppercase;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+/*Configuracion de la línea divisora entre titulo y subtitulo*/
+.linea {
+    width: 520px;
+    height: 1px;
+    background-color: #b9b3b35d; /* rojo como tu estilo */
+    margin: 10px 0 20px;
+}
+
+/*Configuracion de la imagen del banner de la section sobre nosotros*/
+.banner{ 
+    margin: 50px auto 0px; 
+    max-width:1320px;
+}
+
+.banner img{ 
+    display: block;
+    width: 100%;
+}
