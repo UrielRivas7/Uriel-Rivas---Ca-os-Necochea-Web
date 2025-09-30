@@ -3,7 +3,6 @@
     background:#fff;
     padding-bottom: 18px;
     padding-top: 12px;
-
 }
 
 /*Quitar el azul de los links y subrayado*/
@@ -26,8 +25,17 @@
     width:auto; 
     display:block; 
 }
+.logo-header{ 
+    height:56px; 
+    width:auto; 
+    display:block; 
+
+}
+@media (min-width:992px){ 
+    .logo-header{ height:60px;} 
+}
 @media (min-width:1320px){
-    .logo-header{height:56px;} 
+    .logo-header{height:60px;} 
 }
 
 /*Marca a la izquierda*/
@@ -43,10 +51,11 @@
 /*input más alto, con borde rojo grueso y esquinas redondeadas*/
 .search-input{
     border:2px solid #d23a3a;
+    height: 48px;
     font-size:1rem;
-    border-radius:12px;
-    padding-left: 20px;
+    border-radius:6px;
 }
+
 .search-input::placeholder{ 
     color:#d23a3a; 
 }
@@ -69,9 +78,17 @@
     border-color:#b32f2f; 
 }
 
+/* Botón de lupa */
+.btn-red {
+    background-color: #d23a3a;
+    color: #fff;
+    border-radius: 0 6px 6px 0;
+}
+
 /*==== Carrito a la derecha, rojo con ícono ====*/
 .cart-link{     
-    color:#d23a3a; font-weight:700; 
+    color:#d23a3a; 
+    font-weight:700; 
 }
 .cart-link:hover{ 
     color:#b32f2f; 
@@ -80,8 +97,28 @@
     font-size:1.25rem; 
 }
 
-/*Responsive: en mobile no mostramos el texto largo de marca ni “Mi carrito”*/
-@media (max-width:991.98px){
-    .brand-text{display:none;}
-    .cart-text{display:none;}
+
+@media (max-width:576px){
+    .topbar-row{
+        flex-wrap: nowrap;
+    } /* evita salto de línea */
+    .logo-header{
+        height:42px;
+        margin-right: 10px;
+    } /* baja un poco el alto en XS */
+    .search-input{
+        border-radius:6px !important;
+    }/* esquinas completas */
+    .cart-icon{
+        margin-right: 30px;
+    }
+    .searchbar{
+        flex: 1;  /*ocupa el espacio disponible*/
+        max-width: 500px; /*límite para que no se haga gigante*/
+    }
+    .topbar .row {
+        display: flex;
+        align-items: center; /*centra verticalmente*/
+        justify-content: center; /*centra horizontalmente*/
+    }   
 }

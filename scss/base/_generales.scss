@@ -7,6 +7,14 @@
     box-sizing: border-box;
 }
 
+/*Configuracion de los textos de los productos*/
+.a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 /*Tipografia del sitio*/
 body {
     font-family: "Signika Negative", sans-serif
@@ -24,9 +32,6 @@ body {
     margin-top: 20px; /* Add margin to the top */
     flex-direction: column; /* Stack title and subtitle vertically */
     text-align: center; /* Center text */
-    text-decoration: none; /* Remove underline from links */
-    border-radius: 5px; /* Rounded corners for buttons */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }   
 
 .active{
@@ -145,3 +150,10 @@ h1, h2, h3, p {
     display: block;
     width: 100%;
 }
+
+.crumbs{
+    color:#6b7280;
+    font-size: 17px;     
+    font-weight: lighter;
+}
+/*Configuracion de los breadcrumbs*/

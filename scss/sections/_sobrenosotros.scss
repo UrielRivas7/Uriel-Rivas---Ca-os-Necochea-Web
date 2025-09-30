@@ -4,7 +4,7 @@
     margin: 0 auto; 
     padding: 10px 20px 0px; 
     color: #232323;
-    .about-row {
+    &-row {
         max-width:1320px; 
         margin:0 auto;
         display:grid;
@@ -22,18 +22,25 @@
             line-height:1.7;
             margin:0;
         }
-        .about-content {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            .texto p{
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .texto {
+            p{
                 border-left:4px solid #d23a3a;
                 border-radius:10px;
                 padding:12px 14px;
             }
+            & .active {
+                color:#d23a3a; 
+                font-weight:800; 
+                margin-right:4px; 
+            }
         }
     }
-    .about-us .about-cta {
+    &-cta {
         display:flex;
         justify-content:center;
         a {
@@ -45,24 +52,9 @@
             width:100%;
             object-fit:cover;
         }
+        &:hover {
+            opacity:.85;
+        }
     }
 }
 
-
-.texto .active{ 
-    color:#d23a3a; 
-    font-weight:800; 
-    margin-right:4px; 
-}
-/*Configuracion del titulo activo "MISION y VISION" de la section sobre nosotros*/
-
-.about-us .about-cta a:hover {
-    opacity:.85;
-}
-/*Configuracion de la opacidad al seleccionar el enlace del boton de la section sobre nosotros*/
-
-.crumbs{
-    color:#6b7280;
-    font-size: 17px;     
-    font-weight: lighter;
-}

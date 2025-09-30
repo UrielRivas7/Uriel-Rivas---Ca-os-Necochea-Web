@@ -13,4 +13,8 @@
     .navbar-nav {
         gap: 50px; /* más espacio entre ítems */
     }
+    .products-inicio div ul {
+        grid-template-columns: repeat(3, 1fr !important); /* en pantallas medianas/chicas, 2 columnas */
+    
+}
 }

@@ -1,6 +1,10 @@
 /*responsive (móvil)*/
 @media (max-width: 576px){
 
+
+    .products-inicio div ul {
+        grid-template-columns: 2fr !important; /* en pantallas muy chicas, 1 columna */
+    }
 /* Filas de dos columnas → una */
     .about-row,
     .services-row,
@@ -61,5 +65,14 @@
     }
     section > *:last-child{ 
         margin-bottom: 0; 
+    }
+}
+
+@media (max-width: 576px){
+
+    /* si el espacio era por margin */
+    .nav-main{
+    margin-top: 10px !important;
+    margin-bottom: 0px !important;
     }
 }

@@ -1,17 +1,17 @@
 
-@use"generales";
+@use"base/generales";
 
 
-@use"section";
-@use"sobrenosotros";
-@use"productos";
-@use"contactos";
-@use"servicios";
+@use"sections/section";
+@use"sections/sobrenosotros";
+@use"sections/productos";
+@use"sections/contactos";
+@use"sections/servicios";
 
 
-@use"responsive";
-@use"navbar";
-@use"ordenador";
-@use"topbar";
-@use"animations"
+@use"queries/responsive";
+@use"queries/navbar";
+@use"queries/ordenador";
+@use"queries/topbar";
+@use"queries/animations"
 
