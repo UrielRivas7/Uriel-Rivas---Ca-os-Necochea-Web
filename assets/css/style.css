@@ -554,7 +554,7 @@ section > *:first-child {
     }
 
 /*Grilla de productos: 2 por fila*/
-    .products-inicio div nav ul{ 
+    .products-inicio div ul{ 
         grid-template-columns: repeat(2, minmax(150px, 1fr)); 
         gap: 20px;
     }

@@ -1,10 +1,6 @@
 /*responsive (móvil)*/
 @media (max-width: 576px){
 
-
-    .products-inicio div ul {
-        grid-template-columns: 2fr !important; /* en pantallas muy chicas, 1 columna */
-    }
 /* Filas de dos columnas → una */
     .about-row,
     .services-row,
@@ -26,7 +22,7 @@
     }
 
 /* Grilla de productos: 2 por fila */
-    .products-inicio div nav ul{ 
+    .products-inicio div ul{ 
         grid-template-columns: repeat(2, minmax(150px, 1fr)); 
         gap: 20px;
     }
