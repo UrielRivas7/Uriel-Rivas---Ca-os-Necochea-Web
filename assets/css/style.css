@@ -235,7 +235,7 @@ h1, h2, h3, p {
 }
 
 /*section*/
-section nav ul li a {
+section div ul li a {
     color: #000; /* Default link color */
     text-transform: uppercase;
     font-weight: 700;
@@ -338,7 +338,7 @@ section > *:first-child {
 }
 /*Configuracion del contenedor de la section productos*/
 
-.products-inicio div nav ul {
+.products-inicio div ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -352,7 +352,7 @@ section > *:first-child {
 /*Configuracion de los productos*/
 
 
-.products-inicio div nav ul li {
+.products-inicio div ul li {
     height: auto; /* Maintain aspect ratio */
     padding: 20px; /* Add padding around the list item */
     border: 1px solid #ddd; /* Add a border */
@@ -363,11 +363,11 @@ section > *:first-child {
     text-decoration: none;
 }
 
-.products-inicio div nav ul li a {
+.products-inicio div ul li a {
     text-decoration: none; /* Remove underline from links */
 }
 
-.products-inicio div nav ul li img {
+.products-inicio div ul li img {
     height: auto; /* Maintain aspect ratio */
     border-radius: 8%;
     margin-top: 20px; /* Add margin to the top */
